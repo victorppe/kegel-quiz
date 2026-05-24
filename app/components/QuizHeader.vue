@@ -4,6 +4,5 @@ defineProps<{ dark?: boolean }>()
 
 <template>
   <header class="quiz-header">
-    <DoctorKegelLogo />
   </header>
 </template>

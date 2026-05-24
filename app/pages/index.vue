@@ -22,7 +22,6 @@ function select(age: string) {
 <template>
   <div id="ao-age" style="min-height:100dvh;display:flex;flex-direction:column;align-items:center;width:100%;background:#fff;">
     <header class="ao-hdr">
-      <DoctorKegelLogo />
     </header>
 
     <div class="ao-cnt">
