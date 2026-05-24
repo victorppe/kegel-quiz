@@ -59,7 +59,7 @@ const reviews = [
 
     <!-- Header -->
     <header class="flex items-center w-full min-h-[28px] p-6 sm:max-w-[600px] sm:mx-auto">
-      <img src="/doctor-kegel.png" alt="Doctor Kegel" class="w-[120px] sm:w-[150px]" style="min-height:28px;" />
+      <DoctorKegelLogo />
     </header>
 
     <div class="page-wrapper landing-page-template">
