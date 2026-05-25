@@ -59,7 +59,7 @@ const reviews = [
 
     <!-- Header -->
     <header class="flex items-center w-full min-h-[28px] p-6 sm:max-w-[600px] sm:mx-auto">
-      <img src="/doctor-kegel.png" alt="Doctor Kegel" class="w-[120px] sm:w-[150px]" style="min-height:28px;" />
+      <img src="https://quiz.kegel-plan.com/images/en/EN_logo_white_bg.webp" alt="Dr. Kegel" class="w-[120px] sm:w-[150px]" style="min-height:28px;" />
     </header>
 
     <div class="page-wrapper landing-page-template">
@@ -155,7 +155,7 @@ const reviews = [
         <div class="base-button__content">Get My Plan</div>
       </button>
       <p class="personal-plan__disclaimer small_text text-center">
-        We've automatically applied the discount to your 1-month Kegel Plan. After 1 month, your subscription will be automatically renewed at the full price of 31 USD per 1 month and will then be continuously renewed every 1 month until you cancel. If you want to manage your subscription, you may do so visiting Billing Center or in the Doctor Kegel app.
+        We've automatically applied the discount to your 1-month Kegel Plan. After 1 month, your subscription will be automatically renewed at the full price of 31 USD per 1 month and will then be continuously renewed every 1 month until you cancel. If you want to manage your subscription, you may do so visiting Billing Center or in the Dr. Kegel app.
       </p>
     </div>
 

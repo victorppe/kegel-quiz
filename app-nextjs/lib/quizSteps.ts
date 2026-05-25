@@ -19,13 +19,11 @@ export interface QuizStep {
   theme: 'white' | 'dark'
   progress: number
   activeCheckmarks: number
-
   questionId?: number
   question?: string
   options?: string[]
   optionSubtexts?: string[]
   rateLabels?: [string, string]
-
   title?: string
   body?: string
   videoSrc?: string
@@ -35,7 +33,6 @@ export interface QuizStep {
   badgeText?: string
   sourceText?: string
   ctaText?: string
-
   prev?: string
   next?: string
 }
@@ -149,35 +146,6 @@ export const QUIZ_STEPS: QuizStep[] = [
     question: 'How hard is your erection during sex?',
     rateLabels: ['Not hard', 'Very hard'],
     prev: 'q206',
-    next: 'effective-exercises',
-  },
-  {
-    id: 'effective-exercises',
-    type: 'info-image',
-    theme: 'dark',
-    progress: 28,
-    activeCheckmarks: 1,
-    badgeType: 'study',
-    badgeText: 'Study fact',
-    title: '**Kegel Exercises** strengthen PF muscles, which effectively **enhances Erection**',
-    imageSrc: 'https://quiz.kegel-plan.com/_vercel/image?url=%2Fimages%2Fen%2FEN_img_erection_84.webp&w=1536&q=100',
-    sourceText: 'Source: Nuffield Somerset Hospital',
-    ctaText: 'I got it',
-    prev: 'q207',
-    next: 'kegel-eff-2',
-  },
-  {
-    id: 'kegel-eff-2',
-    type: 'info-image',
-    theme: 'dark',
-    progress: 33,
-    activeCheckmarks: 2,
-    badgeType: 'survey',
-    badgeText: 'User survey',
-    title: '84% of men significantly improved erection by following the Kegel Plan',
-    imageSrc: 'https://quiz.kegel-plan.com/_vercel/image?url=%2Fimages%2Fen%2FEN_img_erection_84.webp&w=1536&q=100',
-    ctaText: 'I got it',
-    prev: 'effective-exercises',
     next: 'q208',
   },
   {
@@ -189,7 +157,7 @@ export const QUIZ_STEPS: QuizStep[] = [
     questionId: 208,
     question: 'How satisfied are you with your sex life in the last 3 months?',
     rateLabels: ['Not satisfied', 'Very satisfied'],
-    prev: 'kegel-eff-2',
+    prev: 'q207',
     next: 'q209',
   },
   {
@@ -202,44 +170,6 @@ export const QUIZ_STEPS: QuizStep[] = [
     question: 'How much do you worry about having problem with erection?',
     rateLabels: ["I don't worry", "I'm very worried"],
     prev: 'q208',
-    next: 'q210',
-  },
-  {
-    id: 'q210',
-    type: 'rating',
-    theme: 'white',
-    progress: 43,
-    activeCheckmarks: 2,
-    questionId: 210,
-    question: 'How much do erection problems affect the relationship with your partner?',
-    rateLabels: ["They don't affect", 'They affect a lot'],
-    prev: 'q209',
-    next: 'q211',
-  },
-  {
-    id: 'q211',
-    type: 'single-select',
-    theme: 'white',
-    progress: 46,
-    activeCheckmarks: 2,
-    questionId: 211,
-    question: 'Does your self-esteem suffer from problems with erection?',
-    options: ['Yes, it does', "No, it doesn't", "I don't want to answer"],
-    prev: 'q210',
-    next: 'goal-page',
-  },
-  {
-    id: 'goal-page',
-    type: 'info-goal',
-    theme: 'dark',
-    progress: 55,
-    activeCheckmarks: 2,
-    title: 'Based on your personal goals you can',
-    body: 'Improve **Sexual Wellness**',
-    videoSrc: 'https://quiz.kegel-plan.com/video/en/EN_video_graph_pp1.mp4',
-    videoPoster: 'https://quiz.kegel-plan.com/video/en/EN_video_graph_pp1_zaglushka.webp',
-    ctaText: 'Continue',
-    prev: 'q211',
     next: 'q212',
   },
   {
@@ -251,7 +181,7 @@ export const QUIZ_STEPS: QuizStep[] = [
     questionId: 212,
     question: 'How long does your sex typically last?',
     options: ['Less than 2 minutes', '2-7 minutes', '7-15 minutes', '15 or more minutes'],
-    prev: 'goal-page',
+    prev: 'q209',
     next: 'q213',
   },
   {
@@ -288,31 +218,6 @@ export const QUIZ_STEPS: QuizStep[] = [
     question: 'How would you rate your libido (sex drive) in the last 3 months?',
     rateLabels: ['Low', 'High'],
     prev: 'q214',
-    next: 'q216',
-  },
-  {
-    id: 'q216',
-    type: 'single-select',
-    theme: 'white',
-    progress: 67,
-    activeCheckmarks: 2,
-    questionId: 216,
-    question: 'Do you take any pills to improve sexual performance?',
-    options: ['Yes, every time', 'I take them sometimes', "No, I don't", "I don't want to answer"],
-    prev: 'q215',
-    next: 'kegel-benefits',
-  },
-  {
-    id: 'kegel-benefits',
-    type: 'info-image',
-    theme: 'dark',
-    progress: 70,
-    activeCheckmarks: 3,
-    title: 'The Kegel Plan is better than pills',
-    imageSrc: 'https://quiz.kegel-plan.com/_vercel/image?url=%2Fimages%2Fen%2FEN_img_pills_vs_kegel_Erection_Stamina.webp&w=1536&q=100',
-    sourceText: 'Source: National Center for Biotechnology Info.',
-    ctaText: 'I got it',
-    prev: 'q216',
     next: 'q221',
   },
   {
@@ -324,7 +229,7 @@ export const QUIZ_STEPS: QuizStep[] = [
     questionId: 221,
     question: 'How often do you drink alcohol?',
     options: ['Every day', 'Several times a week', 'Once a week', 'Once a month', "I don't drink at all"],
-    prev: 'kegel-benefits',
+    prev: 'q215',
     next: 'q222',
   },
   {
@@ -349,20 +254,6 @@ export const QUIZ_STEPS: QuizStep[] = [
     question: 'How healthy is your diet?',
     rateLabels: ['Unhealthy', 'Healthy'],
     prev: 'q222',
-    next: 'goal-page-2',
-  },
-  {
-    id: 'goal-page-2',
-    type: 'info-goal-2',
-    theme: 'white',
-    progress: 85,
-    activeCheckmarks: 3,
-    title: 'Based on your personal goals you can',
-    body: 'Improve **Sexual Wellness**',
-    videoSrc: 'https://quiz.kegel-plan.com/video/en/EN_video_graph_pp2.mp4',
-    videoPoster: 'https://quiz.kegel-plan.com/video/en/EN_video_graph_pp2_zaglushka.webp',
-    ctaText: 'Continue',
-    prev: 'q223',
     next: 'q225',
   },
   {
@@ -374,7 +265,7 @@ export const QUIZ_STEPS: QuizStep[] = [
     questionId: 225,
     question: "What's your level of physical activity?",
     rateLabels: ['Low', 'High'],
-    prev: 'goal-page-2',
+    prev: 'q223',
     next: 'q226',
   },
   {
@@ -387,25 +278,6 @@ export const QUIZ_STEPS: QuizStep[] = [
     question: 'How would you rate your daily stress level?',
     rateLabels: ['Low', 'High'],
     prev: 'q225',
-    next: 'health-loading',
-  },
-  {
-    id: 'health-loading',
-    type: 'loading',
-    theme: 'white',
-    progress: 95,
-    activeCheckmarks: 4,
-    title: 'Processing your health data...',
-    prev: 'q226',
-    next: 'health-consent',
-  },
-  {
-    id: 'health-consent',
-    type: 'consent',
-    theme: 'white',
-    progress: 95,
-    activeCheckmarks: 4,
-    prev: 'health-loading',
     next: 'creating-plan',
   },
   {
@@ -415,53 +287,7 @@ export const QUIZ_STEPS: QuizStep[] = [
     progress: 98,
     activeCheckmarks: 4,
     title: 'Analyzing your answers',
-    prev: 'health-consent',
-    next: 'trusted',
-  },
-  {
-    id: 'trusted',
-    type: 'trusted',
-    theme: 'white',
-    progress: 100,
-    activeCheckmarks: 4,
-    title: 'Congratulations on joining the millions of men prioritizing sexual wellness',
-    videoSrc: 'https://quiz.kegel-plan.com/video/video_reviews_f2.mp4',
-    videoPoster: 'https://quiz.kegel-plan.com/video/posters/img_reviews_f2.webp',
-    imageSrc: 'https://quiz.kegel-plan.com/_vercel/image?url=%2Fimages%2Fen%2FEN_img_4mil_men_ww.webp&w=1536&q=100',
-    prev: 'creating-plan',
-    next: 'help-improve',
-  },
-  {
-    id: 'help-improve',
-    type: 'help-improve',
-    theme: 'white',
-    progress: 100,
-    activeCheckmarks: 4,
-    title: 'Your Kegel plan will help you to improve:',
-    prev: 'trusted',
-    next: 'best-thing',
-  },
-  {
-    id: 'best-thing',
-    type: 'best-thing',
-    theme: 'white',
-    progress: 100,
-    activeCheckmarks: 4,
-    title: 'The best thing? It takes just 5 min a day',
-    imageSrc: 'https://quiz.kegel-plan.com/_vercel/image?url=%2Fimages%2Fen%2FEN_img_5min_day.webp&w=1536&q=100',
-    prev: 'help-improve',
-    next: 'final-adjustment',
-  },
-  {
-    id: 'final-adjustment',
-    type: 'final-adjustment',
-    theme: 'white',
-    progress: 100,
-    activeCheckmarks: 4,
-    title: 'Final adjustment',
-    videoSrc: 'https://quiz.kegel-plan.com/video/en/EN_video_graph_final.mp4',
-    videoPoster: 'https://quiz.kegel-plan.com/video/en/EN_video_graph_final_zaglushka.webp',
-    prev: 'best-thing',
+    prev: 'q226',
     next: 'results',
   },
 ]

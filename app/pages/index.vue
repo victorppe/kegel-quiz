@@ -22,7 +22,7 @@ function select(age: string) {
 <template>
   <div id="ao-age" style="min-height:100dvh;display:flex;flex-direction:column;align-items:center;width:100%;background:#fff;">
     <header class="ao-hdr">
-      <img src="/doctor-kegel.png" alt="Doctor Kegel logo" />
+      <img src="https://quiz.kegel-plan.com/images/en/EN_logo_white_bg.webp" alt="Dr. Kegel logo" />
     </header>
 
     <div class="ao-cnt">
